@@ -19,7 +19,9 @@ public class AddCart {
     @FindBy(xpath = "//a[normalize-space()='Black Cross Back Maxi Dress']")
     WebElement clickDressItem;
 
-    @FindBy(xpath = "//a[normalize-space()='pink drop shoulder oversized t shirt']")
+    //a[normalize-space()='Tokyo Talkies']
+
+    @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
     WebElement clickTShirtItem;
 
     @FindBy(id = "pa_color")
@@ -37,7 +39,7 @@ public class AddCart {
     @FindBy(xpath = "//a[normalize-space()='Black Cross Back Maxi Dress - Black']")
     WebElement txtDressProductItem;
 
-    @FindBy(xpath = "//a[normalize-space()='pink drop shoulder oversized t shirt - Pink']")
+    @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
     WebElement txtTShirtProductItem;
 
     public void clickDressItem() {

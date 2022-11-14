@@ -37,7 +37,7 @@ public class TestAddCart {
 
     @And("User choose product dress size")
     public void user_choose_product_dress_size() {
-        addCart.chooseSize("large");
+        addCart.chooseSize("small");
         extentTest.log(LogStatus.PASS, "User choose product dress size");
     }
 
@@ -70,13 +70,13 @@ public class TestAddCart {
 
     @And("User choose product tshirt color")
     public void user_choose_product_tshirt_color() {
-        addCart.chooseColor("pink");
+        addCart.chooseColor("grey");
         extentTest.log(LogStatus.PASS,"User choose product tshirt color");
     }
 
     @And("User choose product tshirt size")
     public void user_choose_product_tshirt_size() {
-        addCart.chooseSize("37");
+        addCart.chooseSize("40");
         extentTest.log(LogStatus.PASS, "User choose product tshirt size");
     }
 

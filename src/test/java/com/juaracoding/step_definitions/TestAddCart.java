@@ -29,16 +29,16 @@ public class TestAddCart {
         extentTest.log(LogStatus.PASS,"User click product dress item");
     }
 
-    @And("User choose product dress color")
-    public void user_choose_product_dress_color() {
+    @And("User choose dress color")
+    public void user_choose_dress_color() {
         addCart.chooseColor("black");
-        extentTest.log(LogStatus.PASS,"User choose product dress color");
+        extentTest.log(LogStatus.PASS,"User choose dress color");
     }
 
-    @And("User choose product dress size")
-    public void user_choose_product_dress_size() {
+    @And("User choose dress size")
+    public void user_choose_dress_size() {
         addCart.chooseSize("small");
-        extentTest.log(LogStatus.PASS, "User choose product dress size");
+        extentTest.log(LogStatus.PASS, "User choose dress size");
     }
 
     @And("User click button add cart on dress product")
@@ -55,7 +55,7 @@ public class TestAddCart {
 
     @Then("Showing dress product after add cart")
     public void showing_dress_product_after_add_cart() {
-        Assert.assertTrue(addCart.getTxtDressProductItem().contains("DRESS"));
+        Assert.assertTrue(addCart.getTxtDressItem().contains("DRESS"));
         extentTest.log(LogStatus.PASS,"Showing dress product after add cart");
     }
 
@@ -68,14 +68,14 @@ public class TestAddCart {
         extentTest.log(LogStatus.PASS,"User click product tshirt item");
     }
 
-    @And("User choose product tshirt color")
-    public void user_choose_product_tshirt_color() {
+    @And("User choose tshirt color")
+    public void user_choose_tshirt_color() {
         addCart.chooseColor("grey");
         extentTest.log(LogStatus.PASS,"User choose product tshirt color");
     }
 
-    @And("User choose product tshirt size")
-    public void user_choose_product_tshirt_size() {
+    @And("User choose tshirt size")
+    public void user_choose_tshirt_size() {
         addCart.chooseSize("40");
         extentTest.log(LogStatus.PASS, "User choose product tshirt size");
     }
@@ -94,7 +94,7 @@ public class TestAddCart {
 
     @Then("Showing tshirt product after add cart")
     public void showing_tshirt_product_after_add_cart() {
-        Assert.assertTrue(addCart.getTxtTShirtProductItem().contains("T SHIRT"));
+        Assert.assertTrue(addCart.getTxtTShirtItem().contains("T SHIRT"));
         extentTest.log(LogStatus.PASS,"Showing dress product after add cart");
     }
 }

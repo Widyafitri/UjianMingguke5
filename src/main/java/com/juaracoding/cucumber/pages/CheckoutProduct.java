@@ -15,7 +15,7 @@ public class CheckoutProduct {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[@class='checkout-button button alt wc-forward']")
+    @FindBy(xpath = "//a[@class='checkout-button button alt wc-forward wp-element-button']")
     WebElement btnCheckout;
 
     @FindBy(id = "billing_first_name")
@@ -53,10 +53,10 @@ public class CheckoutProduct {
     @FindBy(id = "order_comments")
     WebElement notes;
 
-    @FindBy(id = "terms")
+    @FindBy(xpath = "//*[@id=\"payment\"]/div/div/p")
     WebElement checkboxReadAgree;
 
-    @FindBy(xpath = "//*[@id=\"place_order\"]")
+    @FindBy(id = "place_order")
     WebElement btnPlaceOrder;
 
     @FindBy(xpath = "//p[@class='woocommerce-thankyou-order-received']")
@@ -76,9 +76,9 @@ public class CheckoutProduct {
         this.companyName.sendKeys(optionalCompanyName);
     }
 
-    public void country(String country) {
+    public void country(int country) {
         Select selectCountry = new Select(this.country);
-        selectCountry.selectByValue(country);
+        selectCountry.selectByIndex(country);
     }
 
     public void addressOne(String streetAddress) {
@@ -96,9 +96,9 @@ public class CheckoutProduct {
         this.city.sendKeys(city);
     }
 
-    public void province(String province) {
+    public void province(int province) {
         Select selectProvince = new Select(this.province);
-        selectProvince.selectByValue(province);
+        selectProvince.selectByIndex(province);
     }
 
     public void postcode(String postcode) {
@@ -122,6 +122,10 @@ public class CheckoutProduct {
     public void clickBtnPlaceOrder() {
         checkboxReadAgree.click();
         btnPlaceOrder.click();
+    }
+
+    public void checkboxReadAgree() {
+        checkboxReadAgree.click();
     }
 
     public String getTxtThankyou() {

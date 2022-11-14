@@ -8,6 +8,7 @@ import io.cucumber.testng.CucumberOptions;
                 "src/main/resources/features/01.Login.feature",
                 "src/main/resources/features/02.Search.feature",
                 "src/main/resources/features/03.AddCart.feature",
+                "src/main/resources/features/04.CheckoutProduct.feature",
 
         },
         glue = "com.juaracoding",

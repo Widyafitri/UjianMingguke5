@@ -19,8 +19,6 @@ public class AddCart {
     @FindBy(xpath = "//a[normalize-space()='Black Cross Back Maxi Dress']")
     WebElement clickDressItem;
 
-    //a[normalize-space()='Tokyo Talkies']
-
     @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
     WebElement clickTShirtItem;
 
@@ -37,10 +35,10 @@ public class AddCart {
     WebElement btnViewCart;
 
     @FindBy(xpath = "//a[normalize-space()='Black Cross Back Maxi Dress - Black']")
-    WebElement txtDressProductItem;
+    WebElement txtDressItem;
 
     @FindBy(xpath = "//a[contains(text(),'playboy x missguided plus size grey lips print fro')]")
-    WebElement txtTShirtProductItem;
+    WebElement txtTShirtItem;
 
     public void clickDressItem() {
         clickDressItem.click();
@@ -51,14 +49,14 @@ public class AddCart {
     }
 
     public void chooseColor(String color) {
-        Select selectMenuColor = new Select(this.color);
+        Select selectColorOptions = new Select(this.color);
 
-        selectMenuColor.selectByValue(color);
+        selectColorOptions.selectByValue(color);
     }
 
     public void chooseSize(String size) {
-        Select selectMenuSize = new Select(this.size);
-        selectMenuSize.selectByValue(size);
+        Select selectSizeOptions = new Select(this.size);
+        selectSizeOptions.selectByValue(size);
     }
 
     public void clickBtnAddCart() {
@@ -70,11 +68,11 @@ public class AddCart {
         btnViewCart.click();
     }
 
-    public String getTxtDressProductItem() {
-        return txtDressProductItem.getText();
+    public String getTxtDressItem() {
+        return txtDressItem.getText();
     }
 
-    public String getTxtTShirtProductItem() {
-        return txtTShirtProductItem.getText();
+    public String getTxtTShirtItem() {
+        return txtTShirtItem.getText();
     }
 }

@@ -12,7 +12,6 @@ Feature: Checkout Product
     And User input postcode
     And User input phone number
     And User enter notes just optional
-
     And User click checkbox have read and agree
     And User click button place order
     Then Showing message Thank you. Your order has been received

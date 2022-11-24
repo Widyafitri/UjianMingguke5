@@ -1,6 +1,7 @@
 package com.juaracoding.cucumber.pages;
 
 import com.juaracoding.cucumber.drivers.DriverSingleton;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -53,7 +54,7 @@ public class CheckoutProduct {
     @FindBy(id = "order_comments")
     WebElement notes;
 
-    @FindBy(xpath = "//*[@id=\"payment\"]/div/div/p")
+    @FindBy(name = "terms")
     WebElement checkboxReadAgree;
 
     @FindBy(id = "place_order")
@@ -120,12 +121,13 @@ public class CheckoutProduct {
    // }
 
     public void clickBtnPlaceOrder() {
-        checkboxReadAgree.click();
-        btnPlaceOrder.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", btnPlaceOrder);
     }
 
     public void checkboxReadAgree() {
-        checkboxReadAgree.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", checkboxReadAgree);
     }
 
     public String getTxtThankyou() {

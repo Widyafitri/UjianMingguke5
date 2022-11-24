@@ -100,5 +100,6 @@ public class TestCheckoutProduct {
     @Then("Showing message Thank you. Your order has been received")
     public void showing_message_thank_you_your_order_has_been_received() {
         Assert.assertEquals(checkoutProduct.getTxtThankyou(),"Thank you. Your order has been received.");
+        extentTest.log(LogStatus.PASS,"Showing message Thank you. Your order has been received");
     }
 }
